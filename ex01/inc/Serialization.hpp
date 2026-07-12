@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Serialization.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 17:28:28 by williamguer       #+#    #+#             */
-/*   Updated: 2026/04/18 17:34:30 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/07/12 16:07:54 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERIALIZATION_HPP
 # define SERIALIZATION_HPP
 
-#include <cstdint>
+#include <stdint.h>
 
 class Serializer
 {

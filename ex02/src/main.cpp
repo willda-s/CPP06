@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/18 18:43:11 by williamguer       #+#    #+#             */
-/*   Updated: 2026/04/18 19:57:44 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/07/12 16:09:24 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <typeinfo>
 #include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
@@ -31,7 +32,7 @@ Base* generate(void)
         case 2:
             return new C();
         default:
-            return nullptr;
+            return NULL;
     }
 }
 void identify(Base* p)
@@ -75,7 +76,7 @@ void identify(Base& p)
 
 int main()
 {
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+    std::srand(static_cast<unsigned int>(std::time(NULL)));
 
     Base* basePtr = generate();
     std::cout << "Identifying with pointer: ";

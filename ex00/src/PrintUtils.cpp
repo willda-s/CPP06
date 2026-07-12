@@ -42,7 +42,7 @@ void printFromFloat(float f)
 		else
 			std::cout << "char: impossible" << std::endl;
 		
-		if (f > 2147483647 || f < -2147483648)
+		if (f > (float)2147483647 || f < (float)-2147483648)
 			std::cout << "int: impossible" << std::endl;
 		else
 			std::cout << "int: " << static_cast<int>(f) << std::endl;
