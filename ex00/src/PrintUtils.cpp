@@ -63,14 +63,10 @@ void printFromFloat(float f)
 	else
 	{
 		if (f >= 0 && f <= 127)
-			printIntFrom(static_cast<char>(f));
+			printChar(static_cast<char>(f));
 		else
 			std::cout << "char: impossible" << std::endl;
-		
-		if (f > (float)2147483647 || f < (float)-2147483648)
-			std::cout << "int: impossible" << std::endl;
-		else
-			std::cout << "int: " << static_cast<int>(f) << std::endl;
+		printIntFrom(static_cast<double>(f))
 	}
 	
 	std::cout << "float: ";
@@ -87,7 +83,7 @@ void printFromFloat(float f)
 	else if (std::isinf(f))
 		std::cout << (f > 0 ? "+inf" : "-inf") << std::endl;
 	else
-		printDecimal(static_cast<double>(f), "", 10);
+		printDecimal(static_cast<double>(f), "", 6);
 }
 
 void printFromDouble(double d)
@@ -100,14 +96,10 @@ void printFromDouble(double d)
 	else
 	{
 		if (d >= 0 && d <= 127)
-			printIntFrom(static_cast<char>(d));
+			printChar(static_cast<char>(d));
 		else
 			std::cout << "char: impossible" << std::endl;
-		
-		if (d > 2147483647 || d < -2147483648)
-			std::cout << "int: impossible" << std::endl;
-		else
-			std::cout << "int: " << static_cast<int>(d) << std::endl;
+		printIntFrom(d);
 	}
 	
 	std::cout << "float: ";
