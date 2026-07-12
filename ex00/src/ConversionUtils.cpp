@@ -80,5 +80,5 @@ bool isDouble(const std::string& str)
 			return false;
 	}
 	
-	return (dotCount <= 1 && dotCount > 0);
+	return (dotCount <= 1);
 }
