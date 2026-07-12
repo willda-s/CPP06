@@ -5,6 +5,8 @@
 #include <iomanip>
 #include <cmath>
 #include <cctype>
+#include <sstream>
+#include <string>
 
 
 void printFromChar(char c);

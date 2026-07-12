@@ -2,7 +2,7 @@
 
 bool isChar(const std::string& str)
 {
-	return (str.length() == 1 && std::isalpha(str[0]));
+	return (str.length() == 1 && !std::isdigit(str[0]));
 }
 
 bool isInt(const std::string& str)
@@ -39,6 +39,7 @@ bool isFloat(const std::string& str)
 		return false;
 	
 	int dotCount = 0;
+	int digitCount = 0;
 	size_t start = (withoutF[0] == '-' || withoutF[0] == '+') ? 1 : 0;
 	
 	if (start == withoutF.length())
@@ -48,11 +49,12 @@ bool isFloat(const std::string& str)
 	{
 		if (withoutF[i] == '.')
 			dotCount++;
-		else if (!std::isdigit(withoutF[i]))
+		else if (std::isdigit(str[i]))
+			digitCount++;
+		else
 			return false;
 	}
-	
-	return (dotCount <= 1 && dotCount > 0);
+	return (dotCount <= 1 && digitCount > 0);
 }
 
 bool isDouble(const std::string& str)
@@ -67,6 +69,7 @@ bool isDouble(const std::string& str)
 		return false;
 	
 	int dotCount = 0;
+	int digitCount = 0;
 	size_t start = (str[0] == '-' || str[0] == '+') ? 1 : 0;
 	
 	if (start == str.length())
@@ -76,9 +79,10 @@ bool isDouble(const std::string& str)
 	{
 		if (str[i] == '.')
 			dotCount++;
-		else if (!std::isdigit(str[i]))
+		else if (std::isdigit(str[i]))
+			digitCount++;
+		else
 			return false;
 	}
-	
-	return (dotCount <= 1);
+	return (dotCount <= 1 && digitCount > 0);
 }
