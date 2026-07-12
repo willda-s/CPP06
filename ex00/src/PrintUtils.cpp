@@ -66,7 +66,7 @@ void printFromFloat(float f)
 			printChar(static_cast<char>(f));
 		else
 			std::cout << "char: impossible" << std::endl;
-		printIntFrom(static_cast<double>(f))
+		printIntFrom(static_cast<double>(f));
 	}
 	
 	std::cout << "float: ";
